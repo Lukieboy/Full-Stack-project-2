@@ -93,8 +93,8 @@ function filterData(){
    studentList.innerHTML = "";
    filteredList = [];
    for (let index = 0; index < data.length; index++) {
-      let value = searchInput.value + "";
-      if(data[index].name.first.includes(value) || data[index].name.last.includes(value)){
+      let value = searchInput.value.toUpperCase() + "";
+      if(data[index].name.first.toUpperCase().includes(value) || data[index].name.last.toUpperCase().includes(value)){
          filteredList.push(data[index]);
       }
    }
